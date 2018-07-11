@@ -1,0 +1,39 @@
+<section class="hero  is-fullheight " style="margin-bottom: 24px;">
+    <div class="hero-body">
+      <div class="container" >
+          <h1 class="title has-text-white">
+              Dharma Page
+            </h1>
+            <h2 class="subtitle has-text-warning shadow">
+                Selected dhamma talks from famous Sayadaws
+              </h2>
+            
+          <div class="columns is-multiline">
+              <div class="column is-one-quarter " *ngFor="let monk of monks" routerLink="/{{monk.id}}/tracks">
+                <div class="card  ">
+                  <div class="card-image has-background-warning">
+                    <figure class="image " style="padding: 20px;">
+                        <img src="{{monk.image}}" class="monk-image"/>
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <p class="title is-6">
+                      {{monk.name}}
+                    </p>
+                  </div>
+                  
+                </div>
+              </div>
+              
+              
+            </div>
+      </div>
+    </div>
+  </section>
+<div class="container">
+    
+</div>
+
+
+
+

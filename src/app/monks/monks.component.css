@@ -1,0 +1,26 @@
+.hero-body {
+    background-image: url("/assets/blur-buddha-close-up-594364.jpg");
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: #ff3860;
+    
+      
+}
+
+.shadow {
+    text-shadow: 1px 1px black;
+}
+
+.monk-image {
+    max-height: 287px;
+    max-width: 230px;
+    
+        object-fit: cover;
+    
+}

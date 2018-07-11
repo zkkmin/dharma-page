@@ -1,0 +1,49 @@
+
+
+
+<div class="hero is-fullheight">
+    <a class="button is-danger is-outlined" (click)="goBack()"> &lt;&lt; go back</a>
+  <div class="hero-body">
+    <div class="container">
+        
+      <div class="columns is-centered" > 
+          
+        <div class="card" >
+          <div class="card-header header-padding">
+            
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-96x96">
+                  <img src="{{monkImage}}" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content" >
+                <p class="title is-4">{{monkName}}</p>
+                        
+              </div>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="content">
+                <div class="content" *ngIf="selectedTrack">
+                  <p class="title is-6">{{selectedTrack.id}}) {{selectedTrack.name}}</p>
+                  <div ><audio class="player" src="{{selectedTrack.link}}" controls></audio>     </div>
+                      
+                  
+                </div>
+
+              <hr/>  
+              <table class="table is-narrow is-hoverable">
+                <tbody>
+                  <tr *ngFor="let track of tracks" (click)="onSelect(track)">
+                    <td>{{track.id}}</td>
+                    <td >{{track.name}}</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
